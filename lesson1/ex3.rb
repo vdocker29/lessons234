@@ -1,16 +1,13 @@
 puts "Укажите первую сторону(А): "
-a_side = gets
+a = gets.to_i
 puts "Укажите вторую сторону(В): "
-b_side = gets
+b = gets.to_i
 puts "Укажите третью сторону(С): "
-c_side = gets
-if c_side.to_i == a_side.to_i + b_side.to_i
-    puts "Треугольник прямоугольный"
-elsif 
-    if c_side.to_i == a_side.to_i && b_side.to_i == a_side.to_i && c_side.to_i == b_side.to_i
-        puts "Равнобедренный и равносторонний"
-    else 
-        c_side.to_i == a_side.to_i || b_side.to_i == a_side.to_i || c_side.to_i == b_side.to_i
-        puts "Равнобедренный"
-    end
+c = gets.to_i
+if (a**2 == b**2 + c**2) || (b**2 == a**2 + c**2) || (c**2 == a**2 + b**2)
+    puts "Прямоугольный треугольник"
+elsif (a == b) && (b == c) && (c == a)
+    puts "Равнобедренный и равносторонний треугольник"
+elsif (a == b) || (b == c) || (c == a)
+    puts "Равнобедренный"
 end
